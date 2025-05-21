@@ -8,17 +8,18 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/my-gatsby-blog",  // GitHub 저장소 이름
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `모던딥다이브 스터디를 하고 있습니다.`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Seulgi Kim`,
+      summary: ` " read and think a lot. "`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `모던 딥다이브 스터디 : 무식은 무한하고 유식은 유한하다. 스터디후기, 리액트, 모던딥다이브, 스터디`,
+    siteUrl: `https://kimsg.github.io/my-gatsby-blog`,
+    // social: {
+    //   twitter: `kylemathews`,
+    // },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -121,5 +122,10 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: { output: `/sitemap.xml` }
+    }
   ],
 }
