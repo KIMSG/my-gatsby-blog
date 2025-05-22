@@ -1,7 +1,7 @@
 ---
-title: "JavaScript Event Loop: Sync, Macro, and Micro Tasks"
+title: "리액트에서 자주 사용하는 자바스크립트 문법"
 date: "2025-05-22"
-description: "Exploring how JavaScript handles synchronous code, macrotasks, and microtasks"
+description: "JavaScript의 이벤트 루프는 동기 코드, 태스크 큐(맥로태스크), 마이크로 태스크 큐를 통해 비동기 작업을 관리합니다.  본 포스트에서는 각 실행 방식의 차이점을 살펴보고 예제 코드를 통해 이해를 돕습니다."
 ---
 
 # 개요

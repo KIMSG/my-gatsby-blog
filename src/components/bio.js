@@ -32,11 +32,11 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <img
+      <StaticImage
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="https://img.notionusercontent.com/s3/prod-files-secure%2Fdccd1851-7b46-43d0-b492-f091f466c6eb%2F39d0588c-bf00-49bd-ad2e-f9e894c3bce6%2F%E1%84%82%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF.png/size/w=500?exp=1747886106&sig=KfivYuodMUfpdBwiAy5vfI-KBkMtzWc9rYXhfRgrqHg&id=165c2e4b-d112-41ca-b97a-1dc2ab2d0389&table=block"
+        src="../images/profile-pic.png"
         width={50}
         height={50}
         quality={95}

@@ -10,7 +10,7 @@
 module.exports = {
   pathPrefix: "/my-gatsby-blog",  // GitHub 저장소 이름
   siteMetadata: {
-    title: `모던딥다이브 스터디를 하고 있습니다.`,
+    title: `모던리액트딥다이브 스터디를 하고 있습니다.`,
     author: {
       name: `Seulgi Kim`,
       summary: ` " read and think a lot. "`,
