@@ -1,6 +1,6 @@
 ---
-title: "`useState`는 리액트 Hook 중 가장 기본"
-date: "2025-05-23T11:00:00.00Z"
+title: "useState는 리액트 Hook 중 가장 기본"
+date: "2025-05-23T15:00:00.00Z"
 description: "`useState`는 리액트 Hook 중 가장 기본이면서도 **가장 자주 사용되는 상태(state) 관리 도구**야. 아래 내용을 통해 `useState`를 완벽히 이해할 수 있게 단계별로 설명할게!"
 ---
 
@@ -111,5 +111,3 @@ const [value, setValue] = useState(() => {
 | 이전 상태를 기준으로 바꿀 땐 **함수형 업데이트** 사용 |
 
 ---
-
-다음으로 더 알고 싶은 게 있다면 말해줘! 예를 들어 `useEffect`, 또는 실습 예제 같이 해보고 싶으면 바로 알려줘도 좋아. 🙂
