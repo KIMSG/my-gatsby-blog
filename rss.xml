@@ -1,56 +1,171 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모던 딥다이브 스터디 : 무식은 무한하고 유식은 유한하다. 스터디후기, 리액트, 모던딥다이브, 스터디]]></description><link>https://kimsg.github.io/my-gatsby-blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 May 2025 05:19:07 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[아래는 요청하신 내용을 깔끔하게 정리한 블로그 포스트 형태의 마크다운입니다. 복사해서  파일로 저장하거나 블로그에 바로 붙여넣어도 자연스럽게 보일 수 있어요. my-app/
-├─ pages…]]></description><link>https://kimsg.github.io/my-gatsby-blog/nextjs입문/</link><guid isPermaLink="false">https://kimsg.github.io/my-gatsby-blog/nextjs입문/</guid><content:encoded>&lt;p&gt;아래는 요청하신 내용을 깔끔하게 정리한 블로그 포스트 형태의 마크다운입니다. 복사해서 &lt;code class=&quot;language-text&quot;&gt;.md&lt;/code&gt; 파일로 저장하거나 블로그에 바로 붙여넣어도 자연스럽게 보일 수 있어요.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[모던 딥다이브 스터디 : 무식은 무한하고 유식은 유한하다. 스터디후기, 리액트, 모던딥다이브, 스터디]]></description><link>https://kimsg.github.io/my-gatsby-blog</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 May 2025 05:53:00 GMT</lastBuildDate><item><title><![CDATA[리액트 훅으로 시작하는 상태관리]]></title><description><![CDATA[내눈에는 그냥 함수인데.... 이게 훅이라고 책에서는 설명해주더라. 이게 함수인지 아니면 훅인지 이런 구분은 어떻게 하는거야??? 겉으로 보면 단순한 함수처럼 보이지만, React에서는 "훅(Hook…]]></description><link>https://kimsg.github.io/my-gatsby-blog/상태관리/</link><guid isPermaLink="false">https://kimsg.github.io/my-gatsby-blog/상태관리/</guid><pubDate>Mon, 26 May 2025 15:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;내눈에는 그냥 함수인데.... 이게 훅이라고 책에서는 설명해주더라. 이게 함수인지 아니면 훅인지 이런 구분은 어떻게 하는거야???&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;겉으로 보면 단순한 함수처럼 보이지만, &lt;strong&gt;React에서는 &quot;훅(Hook)&quot;이라는 특별한 개념&lt;/strong&gt;이 있어. 너가 본 &lt;code class=&quot;language-text&quot;&gt;useCounter&lt;/code&gt;도 겉보기엔 그냥 함수인데, React 기준에서는 **커스텀 훅(custom hook)**이라고 불러.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initCount&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  counter&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;inc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setCounter&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initCount&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;inc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; prev &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inc &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;🔍 설명 요약:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;useCounter(initCount: number = 0)&lt;/code&gt; → 초기값을 &lt;code class=&quot;language-text&quot;&gt;0&lt;/code&gt;으로 기본 설정&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;useState(initCount)&lt;/code&gt; → 상태 초기화&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;inc()&lt;/code&gt; 함수는 상태를 1 증가시킴&lt;/li&gt;
+&lt;li&gt;마지막에 &lt;code class=&quot;language-text&quot;&gt;counter&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;inc&lt;/code&gt;를 &lt;strong&gt;객체로 리턴&lt;/strong&gt;해서 컴포넌트에서 쉽게 구조분해할 수 있게 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 훅은 예를 들어 이렇게 사용할 수 있어:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;MyComponent&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inc &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;현재 값: &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;inc&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;증가&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;그럼 뭐가 훅이고 뭐가 그냥 함수야?&lt;/h3&gt;
+&lt;p&gt;**훅(hook)**인지 아닌지는 다음 조건으로 판단해:&lt;/p&gt;
 &lt;hr&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;&lt;span class=&quot;token front-matter-block&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;token front-matter yaml language-yaml&quot;&gt;title: &quot;Next.js를 쓰는 기본&quot;
-date: &quot;2025-05-26T14:00:00.00Z&quot;
-description: &quot;**Next.js**는 React 기반의 프레임워크야. React에 서버사이드 렌더링(SSR), 정적 사이트 생성(SSG), 라우팅, API 등 많은 기능이 추가된 &apos;강화된 React&apos;&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;---&lt;/span&gt;&lt;/span&gt;
+&lt;h3&gt;✅ 1. &lt;strong&gt;이름이 &lt;code class=&quot;language-text&quot;&gt;use&lt;/code&gt;로 시작한다&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;useCounter&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;useFetch&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt; 등처럼 이름이 &lt;code class=&quot;language-text&quot;&gt;use&lt;/code&gt;로 시작하면 &lt;em&gt;React 훅 규칙&lt;/em&gt;에 따라 훅으로 인식해.&lt;/li&gt;
+&lt;li&gt;이건 리액트 내부에서 사용하는 린트 규칙(ESLint plugin)이 검사할 정도로 중요한 규칙이야.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;✅ 2. &lt;strong&gt;훅 안에서 React의 내장 훅(&lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;useEffect&lt;/code&gt; 등)을 호출한다&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;useCounter&lt;/code&gt; 내부에서 &lt;code class=&quot;language-text&quot;&gt;useState(initCount)&lt;/code&gt;를 호출하고 있으니까, 리액트 훅을 &lt;em&gt;사용하고 있음&lt;/em&gt; → 이건 &quot;훅&quot;으로 취급돼.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;✅ 3. &lt;strong&gt;컴포넌트 함수 또는 다른 훅 안에서만 호출 가능하다&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;useCounter&lt;/code&gt; 같은 커스텀 훅은 일반 함수처럼 아무 데서나 호출하면 안 되고,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;리액트 함수형 컴포넌트 안에서&lt;/li&gt;
+&lt;li&gt;또는 다른 훅 안에서만 호출해야 해.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이건 리액트의 규칙이자 제한이야. 그래야 상태 관리가 정상 작동함.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3&gt;정리하면&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;훅은 &quot;use로 시작하고, 리액트 훅을 사용하며, 정해진 위치에서만 쓸 수 있는 함수&quot;다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그래서 &lt;code class=&quot;language-text&quot;&gt;useCounter()&lt;/code&gt;는 &lt;strong&gt;함수이자 훅이야&lt;/strong&gt;. 더 정확히 말하면:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&quot;훅(hook)은 특별한 규칙을 따르는 함수의 일종이다.&quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;좋은 예제 소스&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;useCounter라는 커스텀 훅을 사용해서 counter1과 counter2를 만들 때 소스코드를 줄였다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
 
-&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; ✅ 왜 Next.js를 쓰는 걸까?&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initCount&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setCounter&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;initCount&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-기본 React는 CSR(Client Side Rendering)만 제공해. 즉, 브라우저에서 자바스크립트를 다운로드한 뒤 렌더링하지. 그런데…
+  &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;inc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prev &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; prev &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;SEO(검색엔진최적화)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;에는 불리해
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;초기 로딩이 느릴 수 있어&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;페이지 라우팅도 직접 구성해야 해&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inc &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-Next.js는 이런 걸 보완해서 &lt;span class=&quot;token bold&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;빠르고, SEO 친화적이고, 개발자 편의성도 높아&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;**&lt;/span&gt;&lt;/span&gt;!
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Counter1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inc &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Counter1: &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;inc&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 📦 주요 기능 요약&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Counter2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; counter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; inc &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useCounter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;token table&quot;&gt;&lt;span class=&quot;token table-header-row&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-header important&quot;&gt; 기능                        &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-header important&quot;&gt; 설명                                                                        &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;token table-line&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;---------------------------&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;---------------------------------------------------------------------------&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;span class=&quot;token table-data-rows&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; ✅ 파일 기반 라우팅         &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`pages/`&lt;/span&gt; 폴더에 파일을 만들면 자동으로 URL로 연결돼 (&lt;span class=&quot;token code-snippet code keyword&quot;&gt;`about.js`&lt;/span&gt; → &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`/about`&lt;/span&gt;) &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; ✅ 서버 사이드 렌더링 (SSR) &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; 페이지를 서버에서 만들어서 브라우저에 보내줌                                &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; ✅ 정적 사이트 생성 (SSG)   &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; 미리 HTML을 만들어 배포함 (엄청 빠름)                                       &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; ✅ API 라우트               &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`pages/api/`&lt;/span&gt; 폴더에서 백엔드 API도 작성 가능                                &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; ✅ 이미지 최적화            &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;token table-data&quot;&gt; &lt;span class=&quot;token code-snippet code keyword&quot;&gt;`&amp;lt;Image /&gt;`&lt;/span&gt; 컴포넌트로 성능 좋은 이미지 제공                                &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;|&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
-
-&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 🛠 기본 프로젝트 구조&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;my-app/
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;Counter2: &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;counter&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;inc&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Next.js를 쓰는 기본]]></title><description><![CDATA[✅ 왜 Next.js를 쓰는 걸까? 기본 React는 CSR(Client Side Rendering)만 제공해. 즉, 브라우저에서 자바스크립트를 다운로드한 뒤 렌더링하지. 그런데… **SEO…]]></description><link>https://kimsg.github.io/my-gatsby-blog/nextjs입문/</link><guid isPermaLink="false">https://kimsg.github.io/my-gatsby-blog/nextjs입문/</guid><pubDate>Mon, 26 May 2025 14:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;✅ 왜 Next.js를 쓰는 걸까?&lt;/h2&gt;
+&lt;p&gt;기본 React는 CSR(Client Side Rendering)만 제공해. 즉, 브라우저에서 자바스크립트를 다운로드한 뒤 렌더링하지. 그런데…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;**SEO(검색엔진최적화)**에는 불리해&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;초기 로딩이 느릴 수 있어&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;페이지 라우팅도 직접 구성해야 해&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next.js는 이런 걸 보완해서 &lt;strong&gt;빠르고, SEO 친화적이고, 개발자 편의성도 높아&lt;/strong&gt;!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;📦 주요 기능 요약&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;기능&lt;/th&gt;
+&lt;th&gt;설명&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;✅ 파일 기반 라우팅&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;pages/&lt;/code&gt; 폴더에 파일을 만들면 자동으로 URL로 연결돼 (&lt;code class=&quot;language-text&quot;&gt;about.js&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;/about&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅ 서버 사이드 렌더링 (SSR)&lt;/td&gt;
+&lt;td&gt;페이지를 서버에서 만들어서 브라우저에 보내줌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅ 정적 사이트 생성 (SSG)&lt;/td&gt;
+&lt;td&gt;미리 HTML을 만들어 배포함 (엄청 빠름)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅ API 라우트&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;pages/api/&lt;/code&gt; 폴더에서 백엔드 API도 작성 가능&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;✅ 이미지 최적화&lt;/td&gt;
+&lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;Image /&gt;&lt;/code&gt; 컴포넌트로 성능 좋은 이미지 제공&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2&gt;🛠 기본 프로젝트 구조&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;
+my-app/
 ├─ pages/ ← 페이지 파일 저장 위치 (라우팅 자동 처리)
 │ ├─ index.js ← 루트 페이지 (/)
 │ └─ about.js ← /about 페이지
 ├─ public/ ← 이미지 등 정적 파일 보관
 ├─ styles/ ← CSS 파일들
 ├─ next.config.js ← Next.js 설정 파일
-├─ package.json ← 패키지 정보&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;
----
-
-## 🚀 시작하는 법
-
-### 1. Next.js 프로젝트 생성
-
-```bash
-npx create-next-app@latest my-app
-cd my-app
-npm run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+├─ package.json ← 패키지 정보
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;🚀 시작하는 법&lt;/h2&gt;
+&lt;h3&gt;1. Next.js 프로젝트 생성&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;npx create-next-app@latest my-app
+&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; my-app
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;2. 기본 페이지 만들기&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pages/index.js&lt;/code&gt; 파일을 수정해보자:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Home&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -148,8 +263,7 @@ npm run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;td&gt;&lt;code class=&quot;language-text&quot;&gt;/post/[id].js&lt;/code&gt; 등&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[리액트 Hook 중 가장 기본]]></title><description><![CDATA[🔍 1. 란? 함수형 컴포넌트에서 상태값을 만들고, 그 값을 변경할 수 있도록 도와주는 Hook. 🧠 2. 기본 개념 정리 용어 설명  상태값을 선언함  현재 상태값  상태를 변경하는 함수 (변경 시 자동으로 렌더링됨) 초기값 의…]]></description><link>https://kimsg.github.io/my-gatsby-blog/리액트HOOK/</link><guid isPermaLink="false">https://kimsg.github.io/my-gatsby-blog/리액트HOOK/</guid><pubDate>Fri, 23 May 2025 15:00:00 GMT</pubDate><content:encoded>&lt;hr&gt;
+&lt;/table&gt;</content:encoded></item><item><title><![CDATA[리액트 Hook 중 가장 기본]]></title><description><![CDATA[🔍 1. 란? 함수형 컴포넌트에서 상태값을 만들고, 그 값을 변경할 수 있도록 도와주는 Hook. 🧠 2. 기본 개념 정리 용어 설명  상태값을 선언함  현재 상태값  상태를 변경하는 함수 (변경 시 자동으로 렌더링됨) 초기값 의…]]></description><link>https://kimsg.github.io/my-gatsby-blog/리액트HOOK/</link><guid isPermaLink="false">https://kimsg.github.io/my-gatsby-blog/리액트HOOK/</guid><pubDate>Fri, 23 May 2025 15:00:00 GMT</pubDate><content:encoded>&lt;hr&gt;
 &lt;h2&gt;🔍 1. &lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt;란?&lt;/h2&gt;
 &lt;p&gt;함수형 컴포넌트에서 상태값을 만들고, 그 값을 변경할 수 있도록 도와주는 Hook.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
