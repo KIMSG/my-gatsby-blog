@@ -1,8 +1,3 @@
-아래는 요청하신 내용을 깔끔하게 정리한 블로그 포스트 형태의 마크다운입니다. 복사해서 `.md` 파일로 저장하거나 블로그에 바로 붙여넣어도 자연스럽게 보일 수 있어요.
-
----
-
-```md
 ---
 title: "Next.js를 쓰는 기본"
 date: "2025-05-26T14:00:00.00Z"
@@ -34,6 +29,7 @@ Next.js는 이런 걸 보완해서 **빠르고, SEO 친화적이고, 개발자 �
 ---
 
 ## 🛠 기본 프로젝트 구조
+
 ```
 
 my-app/
@@ -45,7 +41,7 @@ my-app/
 ├─ next.config.js ← Next.js 설정 파일
 ├─ package.json ← 패키지 정보
 
-````
+```
 
 ---
 
@@ -57,7 +53,7 @@ my-app/
 npx create-next-app@latest my-app
 cd my-app
 npm run dev
-````
+```
 
 ### 2. 기본 페이지 만들기
 
@@ -174,7 +170,3 @@ export default function Post() {
 | `<Link href="/about">`  | 부드럽고 빠른 페이지 이동 | 네비게이션 메뉴 등 |
 | `router.push('/about')` | 프로그래밍적으로 이동     | 버튼 클릭 등       |
 | 동적 라우팅             | 변수에 따라 다른 페이지   | `/post/[id].js` 등 |
-
-```
-
-```
